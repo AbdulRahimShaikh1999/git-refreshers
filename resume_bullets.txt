@@ -1,0 +1,78 @@
+1. GitHub Actions CI/CD Pipeline
+
+Create a simple app (even a static “Hello World” index.html).
+
+Write a GitHub Actions workflow that:
+
+Runs terraform plan and terraform apply on push.
+
+Deploys app files to EC2 (via SSH or S3 + EC2 script).
+
+Verify deployment automatically after commit.
+
+2. Provisioning EC2 (with Security Groups + User Data)
+
+Use Terraform to spin up an EC2 instance.
+
+Add a security group allowing HTTP (80) + SSH (22).
+
+Use a user data script to auto-install NGINX and deploy a static page.
+
+Verify you can hit the EC2 public IP in your browser.
+
+3. CloudWatch Alarms + Logs
+
+Create a CloudWatch alarm for high CPU on your EC2 instance.
+
+Install and configure the CloudWatch agent to push logs (e.g., NGINX access logs).
+
+Create a log filter for “ERROR” and test it by writing a dummy error line.
+
+4. IAM Roles/Policies
+
+Create a new IAM role with an inline policy that only allows s3:GetObject on one bucket.
+
+Attach the role to an EC2 instance.
+
+SSH into the EC2 and verify that you can (or can’t) access the bucket.
+
+5. Elastic Load Balancer
+
+Spin up 2 EC2 instances (with NGINX).
+
+Deploy an Application Load Balancer (ALB).
+
+Register both instances in the ALB target group.
+
+Test that refreshing the ALB DNS name alternates responses between instances.
+
+6. S3 Static Site (Optional)
+
+Create an S3 bucket, upload a static site (index.html).
+
+Enable static website hosting on the bucket.
+
+Block public access and instead configure bucket policies for authenticated users only.
+
+Access the site via S3 endpoint or CloudFront.
+
+
+
+
+
+--------
+
+
+📌 Resume Bullets (Junior DevOps Engineer, CBSA)
+
+Assisted in building GitHub Actions CI/CD pipelines to automate build, test, and deployment of application code onto AWS EC2 instances.
+
+Provisioned and configured AWS EC2 instances, including security groups and user data scripts, to provide reliable dev and test environments.
+
+Implemented CloudWatch alarms and log groups to monitor application performance and troubleshoot runtime errors.
+
+Managed IAM users, roles, and policies, enabling least-privilege access for developers across AWS services.
+
+Supported deployment of an Elastic Load Balancer (ELB) to distribute traffic across multiple EC2 instances, improving application availability.
+
+Deployed and configured an S3 static site for internal documentation, with access restrictions for security. (optional — nice-to-have for breadth)
